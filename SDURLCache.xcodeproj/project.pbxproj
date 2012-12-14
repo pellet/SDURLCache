@@ -14,6 +14,10 @@
 		53F5592C114F1ED800A3DA4B /* SDURLCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F5592B114F1ED800A3DA4B /* SDURLCacheTests.m */; };
 		53F559B7114F2AA600A3DA4B /* libSDURLCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libSDURLCache.a */; };
 		AA747D9F0F9514B9006C5449 /* SDURLCache_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* SDURLCache_Prefix.pch */; };
+		EBDFAE8B167AB5C100C3193E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDFAE8A167AB5C100C3193E /* Cocoa.framework */; };
+		EBDFAE95167AB5C100C3193E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBDFAE93167AB5C100C3193E /* InfoPlist.strings */; };
+		EBDFAE9E167AB5D200C3193E /* SDURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F557F3114EA63600A3DA4B /* SDURLCache.m */; };
+		EBDFAE9F167AB5D400C3193E /* SDCachedURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5318A9AA155DD7B500AB6767 /* SDCachedURLResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,14 @@
 		53F5592B114F1ED800A3DA4B /* SDURLCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDURLCacheTests.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* SDURLCache_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDURLCache_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libSDURLCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDURLCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDFAE89167AB5C100C3193E /* SDURLCache-MacOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "SDURLCache-MacOSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDFAE8A167AB5C100C3193E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		EBDFAE8D167AB5C100C3193E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EBDFAE8E167AB5C100C3193E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EBDFAE8F167AB5C100C3193E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EBDFAE92167AB5C100C3193E /* SDURLCache-MacOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDURLCache-MacOSX-Info.plist"; sourceTree = "<group>"; };
+		EBDFAE94167AB5C100C3193E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBDFAE96167AB5C100C3193E /* SDURLCache-MacOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDURLCache-MacOSX-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBDFAE85167AB5C100C3193E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDFAE8B167AB5C100C3193E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +82,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libSDURLCache.a */,
 				53F5591C114F1D5E00A3DA4B /* SDURLCacheTestBundle.octest */,
+				EBDFAE89167AB5C100C3193E /* SDURLCache-MacOSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +93,7 @@
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				53F55929114F1EA300A3DA4B /* Tests */,
+				EBDFAE90167AB5C100C3193E /* SDURLCache-MacOSX */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -81,6 +103,8 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBDFAE8A167AB5C100C3193E /* Cocoa.framework */,
+				EBDFAE8C167AB5C100C3193E /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +137,34 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
+		EBDFAE8C167AB5C100C3193E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBDFAE8D167AB5C100C3193E /* AppKit.framework */,
+				EBDFAE8E167AB5C100C3193E /* CoreData.framework */,
+				EBDFAE8F167AB5C100C3193E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EBDFAE90167AB5C100C3193E /* SDURLCache-MacOSX */ = {
+			isa = PBXGroup;
+			children = (
+				EBDFAE91167AB5C100C3193E /* Supporting Files */,
+			);
+			path = "SDURLCache-MacOSX";
+			sourceTree = "<group>";
+		};
+		EBDFAE91167AB5C100C3193E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBDFAE92167AB5C100C3193E /* SDURLCache-MacOSX-Info.plist */,
+				EBDFAE93167AB5C100C3193E /* InfoPlist.strings */,
+				EBDFAE96167AB5C100C3193E /* SDURLCache-MacOSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -123,6 +175,13 @@
 				AA747D9F0F9514B9006C5449 /* SDURLCache_Prefix.pch in Headers */,
 				53F557F4114EA63600A3DA4B /* SDURLCache.h in Headers */,
 				5318A9AB155DD7B500AB6767 /* SDCachedURLResponse.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDFAE86167AB5C100C3193E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +224,24 @@
 			productReference = D2AAC07E0554694100DB518D /* libSDURLCache.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		EBDFAE88167AB5C100C3193E /* SDURLCache-MacOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBDFAE9C167AB5C100C3193E /* Build configuration list for PBXNativeTarget "SDURLCache-MacOSX" */;
+			buildPhases = (
+				EBDFAE84167AB5C100C3193E /* Sources */,
+				EBDFAE85167AB5C100C3193E /* Frameworks */,
+				EBDFAE86167AB5C100C3193E /* Headers */,
+				EBDFAE87167AB5C100C3193E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SDURLCache-MacOSX";
+			productName = "SDURLCache-MacOSX";
+			productReference = EBDFAE89167AB5C100C3193E /* SDURLCache-MacOSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,6 +259,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* SDURLCache */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -190,6 +268,7 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* SDURLCache */,
 				53F5591B114F1D5E00A3DA4B /* SDURLCacheTestBundle */,
+				EBDFAE88167AB5C100C3193E /* SDURLCache-MacOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +278,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBDFAE87167AB5C100C3193E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDFAE95167AB5C100C3193E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +325,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBDFAE84167AB5C100C3193E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDFAE9E167AB5D200C3193E /* SDURLCache.m in Sources */,
+				EBDFAE9F167AB5D400C3193E /* SDCachedURLResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -247,6 +343,17 @@
 			targetProxy = 53F559C2114F2ABF00A3DA4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBDFAE93167AB5C100C3193E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBDFAE94167AB5C100C3193E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -398,6 +505,76 @@
 			};
 			name = Release;
 		};
+		EBDFAE9A167AB5C100C3193E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SDURLCache-MacOSX/SDURLCache-MacOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "SDURLCache-MacOSX/SDURLCache-MacOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		EBDFAE9B167AB5C100C3193E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SDURLCache-MacOSX/SDURLCache-MacOSX-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "SDURLCache-MacOSX/SDURLCache-MacOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -424,6 +601,15 @@
 			buildConfigurations = (
 				53F5591E114F1D5F00A3DA4B /* Debug */,
 				53F5591F114F1D5F00A3DA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBDFAE9C167AB5C100C3193E /* Build configuration list for PBXNativeTarget "SDURLCache-MacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBDFAE9A167AB5C100C3193E /* Debug */,
+				EBDFAE9B167AB5C100C3193E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
