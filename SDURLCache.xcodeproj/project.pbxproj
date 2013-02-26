@@ -14,6 +14,7 @@
 		53F5592C114F1ED800A3DA4B /* SDURLCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F5592B114F1ED800A3DA4B /* SDURLCacheTests.m */; };
 		53F559B7114F2AA600A3DA4B /* libSDURLCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libSDURLCache.a */; };
 		AA747D9F0F9514B9006C5449 /* SDURLCache_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* SDURLCache_Prefix.pch */; };
+		EB93C90916881D3700BAA115 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB93C90816881D3700BAA115 /* UIKit.framework */; };
 		EBDFAE8B167AB5C100C3193E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDFAE8A167AB5C100C3193E /* Cocoa.framework */; };
 		EBDFAE95167AB5C100C3193E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBDFAE93167AB5C100C3193E /* InfoPlist.strings */; };
 		EBDFAE9E167AB5D200C3193E /* SDURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F557F3114EA63600A3DA4B /* SDURLCache.m */; };
@@ -40,6 +41,7 @@
 		53F5592B114F1ED800A3DA4B /* SDURLCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDURLCacheTests.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* SDURLCache_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDURLCache_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libSDURLCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDURLCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB93C90816881D3700BAA115 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = ../Chameleon/build/Debug/UIKit.framework; sourceTree = "<group>"; };
 		EBDFAE89167AB5C100C3193E /* SDURLCache-MacOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "SDURLCache-MacOSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDFAE8A167AB5C100C3193E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		EBDFAE8D167AB5C100C3193E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB93C90916881D3700BAA115 /* UIKit.framework in Frameworks */,
 				EBDFAE8B167AB5C100C3193E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +93,7 @@
 		0867D691FE84028FC02AAC07 /* SDURLCache */ = {
 			isa = PBXGroup;
 			children = (
+				EB93C90816881D3700BAA115 /* UIKit.framework */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				53F55929114F1EA300A3DA4B /* Tests */,
@@ -417,6 +421,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -447,6 +452,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -521,6 +527,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/../Chameleon/build/Debug\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -560,6 +567,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					"\"$(SRCROOT)/../Chameleon/build/Debug\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

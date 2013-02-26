@@ -9,7 +9,10 @@
 #import "SDURLCache.h"
 #import "SDCachedURLResponse.h"
 #import <CommonCrypto/CommonDigest.h>
+
+//#ifdef IPHONE_TARGET
 #import <UIKit/UIDevice.h>
+//#endif
 
 // The removal of the NSCachedURLResponse category means that NSKeyedArchiver
 // will throw an EXC_BAD_ACCESS when attempting to load NSCachedURLResponse
@@ -425,6 +428,7 @@ static NSDateFormatter* CreateDateFormatter(NSString *format)
 {
     // iOS 5 implements disk caching. SDURLCache then disables itself at runtime if the current device OS
     // version is 5 or greater
+//#ifdef IPHONE_TARGET
     NSArray *version = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
     disabled = [[version objectAtIndex:0] intValue] >= 5 && !_enableForIOS5AndUp;
 
@@ -433,6 +437,7 @@ static NSDateFormatter* CreateDateFormatter(NSString *format)
         // iOS NSURLCache doesn't accept a full path but a single path component
         path = [path lastPathComponent];
     }
+//#endif
 
     if ((self = [super initWithMemoryCapacity:memoryCapacity diskCapacity:diskCapacity diskPath:path]) && !disabled)
     {
@@ -549,11 +554,13 @@ static NSDateFormatter* CreateDateFormatter(NSString *format)
                 // OPTI: Store the response to memory cache for potential future requests
                 [super storeCachedResponse:diskResponse forRequest:request];
 
+//#ifdef IPHONE_TARGET
                 // SRK: Work around an interesting retainCount bug in CFNetwork on iOS << 3.2.
                 if (kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iPhoneOS_3_2)
                 {
                     diskResponse = [super cachedResponseForRequest:request];
                 }
+//#endif
 
                 if (diskResponse)
                 {
