@@ -556,10 +556,10 @@ static NSDateFormatter* CreateDateFormatter(NSString *format)
 
 //#ifdef IPHONE_TARGET
                 // SRK: Work around an interesting retainCount bug in CFNetwork on iOS << 3.2.
-                if (kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iPhoneOS_3_2)
-                {
-                    diskResponse = [super cachedResponseForRequest:request];
-                }
+//                if (kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iPhoneOS_3_2)
+//                {
+//                    diskResponse = [super cachedResponseForRequest:request];
+//                }
 //#endif
 
                 if (diskResponse)
